@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Extensions.Logging;
 using StringInterpolationTemplate.Utils;
 
@@ -28,52 +28,66 @@ public class StringInterpolationService : IStringInterpolationService
 
     public string Number02()
     {
-        throw new NotImplementedException();
+        DateTime now = _date.Now;
+        return $"{now:yyyy.MM.dd}";
+
+
     }
 
     public string Number03()
     {
-        throw new NotImplementedException();
+        DateTime now = _date.Now;
+        return $"Day {now:dd} of {now:MMMM}, {now:yyyy}";
     }
 
     public string Number04()
     {
-        throw new NotImplementedException();
+        DateTime now = _date.Now;
+        return $"Year: {now:yyyy}, Month: {now:MM}, Day: {now:dd}";
     }
 
     public string Number05()
     {
-        throw new NotImplementedException();
+        DateTime now = _date.Now;
+        return $"{now,10:dddd}";
     }
 
     public string Number06()
     {
-        throw new NotImplementedException();
+        DateTime now = _date.Now;
+        return $"{now,10:hh:mm tt}{now,10:dddd}";
     }
 
     public string Number07()
     {
-        throw new NotImplementedException();
+        DateTime now = _date.Now;
+        return $"h:{now:hh}, m:{now:mm}, s:{now:ss}";
     }
 
     public string Number08()
     {
-        throw new NotImplementedException();
+        DateTime now = _date.Now;
+        return $"{now:yyyy.MM.dd.hh.mm.ss}";
     }
 
     public string Number09()
     {
-        throw new NotImplementedException();
+        var pi = Math.PI;
+        return $"{pi:c2}";
     }
 
     public string Number10()
     {
-        throw new NotImplementedException();
+        var pi = Math.PI;
+        return $"{pi,10:n3}";
     }
 
     public string Number11()
     {
-        throw new NotImplementedException();
+        DateTime now = DateTime.Now;
+        string hex = $"{now:yyyy}";
+        int hexd = Convert.ToInt32(hex);
+        return $"{hexd:X}";
     }
 
     //2.2019.01.22
